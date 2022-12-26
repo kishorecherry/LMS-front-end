@@ -9,5 +9,5 @@ FROM amazon/aws-cli
 RUN mkdir /front_app
 WORKDIR /front_app
 COPY --from=build /app_build/public /front_app
-RUN aws S3 cp /front_app s3://kishore2345 -r
+RUN aws S3 cp /front_app s3://kishore2345 --recursive
 EXPOSE 3000
