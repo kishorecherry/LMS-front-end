@@ -4,7 +4,7 @@ WORKDIR /app_build
 COPY . /app_build
 RUN npm install -g @angular/cli
 RUN npm install -f
-RUN npm build --prod
+RUN ng build --prod
 FROM amazon/aws-cli
 RUN mkdir /front_app
 WORKDIR /front_app
